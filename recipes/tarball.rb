@@ -24,6 +24,7 @@ td          = Dir.tmpdir
 tmp         = File.join(td, node.pypy.tarball.filename)
 tarball_dir = File.join(td, node.pypy.tarball.dirname)
 
+package "libssl1.0.0"
 
 remote_file(tmp) do
   source node.pypy.tarball.url
