@@ -36,8 +36,8 @@ default[:pypy] = {
     :lib_filename => "pypy-#{version}-lib.deb",
     :installation_dir => "/usr"
   },
-  'distribute_script_url': "http://python-distribute.org/distribute_setup.py'",
-  'distribute_option': {
-    'download_base': "https://pypi.python.org/packages/source/d/distribute/"
+  'distribute_script_url' => "http://python-distribute.org/distribute_setup.py'",
+  'distribute_option' => {
+    'download_base' => "https://pypi.python.org/packages/source/d/distribute/"
   }
 }
