@@ -32,7 +32,7 @@ default[:pypy] = {
                      else
                        "pypy-#{version}-linux64.deb"
                      end,
-    :dirname      => "pypy-#{version}"
+    :dirname      => "pypy-#{version}",
     :lib_filename => "pypy-#{version}-lib.deb"
   }
 }
