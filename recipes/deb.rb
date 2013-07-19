@@ -26,7 +26,7 @@ tarball_dir = File.join(td, node.pypy.tarball.dirname)
 
 
 remote_file(tmp) do
-  source node.pypy.deb
+  source node.pypy.deb.url
 
   not_if "which pypy"
 end
