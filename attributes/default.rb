@@ -34,5 +34,6 @@ default[:pypy] = {
                      end,
     :dirname      => "pypy-#{version}",
     :lib_filename => "pypy-#{version}-lib.deb"
+    :installation_dir => "/usr"
   }
 }

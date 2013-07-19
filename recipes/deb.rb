@@ -42,6 +42,6 @@ bash "install pypy.deb" do
     dpkg -i #{tmp}
   EOS
 
-  #creates "#{node.pypy.tarball.installation_dir}/bin/pypy"
+  creates "#{node.pypy.deb.installation_dir}/bin/pypy"
 end
 
