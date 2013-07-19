@@ -20,7 +20,7 @@
 # 1. Download the tarball to /tmp
 require "tmpdir"
 
-td = Dir.tempdir
+td = Dir.tmpdir
 tmp = File.join(td, node.pypy.deb.filename)
 tmp_lib = File.join(td, node.pypy.deb.lib_filename)
 
