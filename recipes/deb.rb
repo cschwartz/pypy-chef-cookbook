@@ -20,22 +20,25 @@
 # 1. Download the tarball to /tmp
 require "tmpdir"
 
-td          = Dir.tmpdir
-tmp         = File.join(td, node.pypy.tarball.filename)
-tarball_dir = File.join(td, node.pypy.tarball.dirname)
-
+td = Dir.tempdir
+tmp = File.join(td, node.pypy.deb.filename)
+tmp_lib = File.join(td, node.pypy.deb.lib_filename)
 
 remote_file(tmp) do
   source node.pypy.deb.url
-
   not_if "which pypy"
 end
 
-bash "extract #{tmp}, move it to #{node.pypy.tarball.installation_dir}" do
+remote_file(tmp_lib) do
+  source node.pypy.deb.lib_url
+end
+
+bash "install pypy.deb" do
   user "root"
   cwd  "/tmp"
 
   code <<-EOS
+    dpkg -i #{tmp_lib}
     dpkg -i #{tmp}
   EOS
 

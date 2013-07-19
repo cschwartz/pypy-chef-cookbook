@@ -19,10 +19,20 @@ default[:pypy] = {
     :installation_dir => "/usr/local/pypy"
   },
   :deb => {
-    :url => if arch == "i386"
-              "http://people.debian.org/~stefanor/pypy/wheezy/pypy_2.0.0+dfsg-1~bpo70+1~sr1_i386.deb"
-            else
-              "http://people.debian.org/~stefanor/pypy/wheezy/pypy_2.0.0+dfsg-1~bpo70+1~sr1_amd64.deb"
-            end
+    :version      => "#{version}.0",
+    :dirname      => "pypy-#{version}.0",
+    :url          => if arch == "i386"
+                       "http://people.debian.org/~stefanor/pypy/wheezy/pypy_#{ version }.0+dfsg-1~bpo70+1~sr1_i386.deb"
+                     else
+                       "http://people.debian.org/~stefanor/pypy/wheezy/pypy_#{ version }.0+dfsg-1~bpo70+1~sr1_amd64.deb"
+                     end,
+    :lib_url      => "http://people.debian.org/~stefanor/pypy/wheezy/pypy-lib_#{ version }.0+dfsg-1~bpo70+1~sr1_all.deb",
+    :filename     => if arch == "i386"
+                       "pypy-#{version}-linux.deb"
+                     else
+                       "pypy-#{version}-linux64.deb"
+                     end,
+    :dirname      => "pypy-#{version}"
+    :lib_filename => "pypy-#{version}-lib.deb"
   }
 }
