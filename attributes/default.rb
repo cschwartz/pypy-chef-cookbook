@@ -17,5 +17,8 @@ default[:pypy] = {
                      end,
     :dirname          => "pypy-#{version}",
     :installation_dir => "/usr/local/pypy"
+  },
+  :deb => {
+    :url => "http://people.debian.org/~stefanor/pypy/wheezy/pypy_2.0.0+dfsg-1~bpo70+1~sr1_amd64.deb"
   }
 }
