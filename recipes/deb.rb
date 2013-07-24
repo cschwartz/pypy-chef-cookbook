@@ -31,6 +31,7 @@ end
 
 remote_file(tmp_lib) do
   source node.pypy.deb.lib_url
+  not_if "which pypy"
 end
 
 bash "install pypy.deb" do

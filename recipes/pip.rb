@@ -22,7 +22,7 @@
 # redhat/package: /usr/bin/pip (sha a8a3a3)
 # omnibus/source: /opt/local/bin/pip (sha 29ce9874)
 
-pip_binary = "/usr/bin/pip"
+pip_binary = "/usr/local/bin/pip"
 
 # Ubuntu's python-setuptools, python-pip and python-virtualenv packages
 # are broken...this feels like Rubygems!

@@ -48,7 +48,7 @@ action :delete do
 end
 
 def load_current_resource
-  @current_resource = Chef::Resource::PythonVirtualenv.new(new_resource.name)
+  @current_resource = Chef::Resource::PypyVirtualenv.new(new_resource.name)
   @current_resource.path(new_resource.path)
 
   if exists?
@@ -60,11 +60,7 @@ def load_current_resource
 end
 
 def virtualenv_cmd()
-  if node['python']['install_method'].eql?("source")
-    ::File.join(node['python']['prefix_dir'], "/bin/virtualenv")
-  else
-    "virtualenv"
-  end
+  "virtualenv"
 end
 
 private

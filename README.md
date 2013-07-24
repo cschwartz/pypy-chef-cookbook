@@ -1,3 +1,12 @@
+This is cookbook is based on multiple sources
+ * [Pypy Chef cookbook](https://github.com/michaelklishin/pypy-chef-cookbook) which was adapted to use deb packages by [Stefano Rivera](http://people.debian.org/~stefanor/pypy/wheezy/) for Wheezy, and
+ * The virtualenv and pip resources from the [Opscode Python
+   cookbook](https://github.com/opscode-cookbooks/python) 
+
+Any bugs occuring are probably due to me hacking in the original code,
+and not the original authors fault.
+The license of the original code obviously stays intact.
+
 # PyPy Chef Cookbook
 
 This is an OpsCode Chef cookbook for [PyPy](http://pypy.org).
